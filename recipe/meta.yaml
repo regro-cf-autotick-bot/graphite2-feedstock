@@ -25,10 +25,10 @@ requirements:
     - m2-make  # [win]
     - m2-patch  # [win]
     - cmake
-    - {{ compiler('c') }}          # [not win]
-    - {{ compiler('m2w64_c') }}    # [win]
-    - {{ compiler('cxx') }}        # [not win]
-    - {{ compiler('m2w64_cxx') }}  # [win]
+    - ninja  # [win]
+    - {{ compiler('c') }}    # [not win]
+    - {{ compiler('cxx') }}  # [not win]
+    - vs2015_win-64          # [win] - no VS2008 since it's too much of a hassle to support
   host:
 
 test:
