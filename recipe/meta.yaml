@@ -25,10 +25,9 @@ requirements:
     - m2-make  # [win]
     - m2-patch  # [win]
     - cmake
-    - {{ compiler('c') }}          # [not win]
-    - {{ compiler('m2w64_c') }}    # [win]
-    - {{ compiler('cxx') }}        # [not win]
-    - {{ compiler('m2w64_cxx') }}  # [win]
+    - ninja  # [win]
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
   host:
 
 test:
