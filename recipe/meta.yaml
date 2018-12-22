@@ -1,6 +1,6 @@
 {% set name = "graphite2" %}
-{% set version = "1.3.12" %}
-{% set sha256 = "cd9530c16955c181149f9af1f13743643771cb920c75a04c95c77c871a2029d0" %}
+{% set version = "1.3.13" %}
+{% set sha256 = "dd63e169b0d3cf954b397c122551ab9343e0696fb2045e1b326db0202d875f06" %}
 
 package:
   name: {{ name|lower }}
@@ -10,14 +10,15 @@ source:
   url: https://github.com/silnrsi/graphite/releases/download/{{ version }}/{{ name }}-{{ version }}.tgz
   sha256: {{ sha256 }}
   patches:
-    # Windows patches from https://github.com/Alexpux/MINGW-packages/tree/master/graphite2
+    # Windows patches from https://github.com/Alexpux/MINGW-packages/tree/master/mingw-w64-graphite2
+    # 003 updated for 1.3.13.
     - 001-graphite2-1.3.12-win64.patch          # [win]
     - 002-graphite2-1.2.1-pkgconfig.patch       # [win]
-    - 003-graphite2-1.3.12-staticbuild.patch    # [win]
+    - 003-graphite2-1.3.13-staticbuild.patch    # [win]
     - 004-graphite2-1.3.12-dllimport-fix.patch  # [win]
 
 build:
-  number: 1001
+  number: 1000
   detect_binary_files_with_prefix: true
 
 requirements:
