@@ -18,7 +18,7 @@ source:
     - 004-graphite2-1.3.12-dllimport-fix.patch  # [win]
 
 build:
-  number: 1000
+  number: 1001
   detect_binary_files_with_prefix: true
 
 requirements:
